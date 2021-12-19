@@ -1,6 +1,6 @@
 #  Flask_APP TEST 
 
-This repository contains follwing files for testing [Flask_App](ttps://github.com/SH-interview/Flasky).
+This repository contains follwing files for testing [Flask_App](https://github.com/SH-interview/Flasky).
 
 - [Python API test](#API-automation-requests-with-Python)
 - [RobotFramework UI test](#UI-automation-with-Robot-Framework)
@@ -53,6 +53,7 @@ User info: 	 {'firstname': 'mSxp', 'lastname': 'hlfT', 'phone': '584234'}
 ```
 
 `unittest.py`: If want this file run, should put this file and Flasky_API_test.py in same path. After run this file, can get  a .html file(test report) at a specific path written in the unittest.py (path can be changed), test report is as follow:
+
 ![Test results](./utility/Python-API-TestReport.png)
 
 ##  UI automation with Robot Framework
