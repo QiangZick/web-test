@@ -69,7 +69,7 @@ class Apitest():
         
     def review_users(self):
         self.response_review = requests.get(self.url_r)
-        print("\n--------review registered users---------")
+        print("\n--------review_registered_users---------")
         print("Status: \t", self.response_review.json()["status"])
         print("\nThe registered user is: \n", self.response_review.json()["payload"])
         
@@ -83,17 +83,18 @@ class Apitest():
                         }
         url_get_info = self.url_r + '/' + str(username)
         self.updated_info=requests.put(url_get_info, json=new_user_info, headers=self.headers)
+        print("\n--------update_user_info---------")
         print("\nUpdate Status:\t", self.updated_info.json()["status"])
 
 ''' Main Function ''' 
 def main():
     
-    api_object = Apitest(url_register, url_login, headers) # Initialize an object to api class
-    username, password = api_object.register()              # Register a user with random information
-    user_info = api_object.get_user_info(username, password) #Get personal information
-    api_object.update_info(username, password) #Update personal information
-    api_object.get_user_info(username, password) # Check performation after update
-    api_object.review_users() #Review registered users
+    api_object = Apitest(url_register, url_login, headers)      # Initialize an object to api class
+    username, password = api_object.register()                  # Register a user with random information
+    user_info = api_object.get_user_info(username, password)    # Get personal information
+    api_object.update_info(username, password)                  # Update personal information
+    api_object.get_user_info(username, password)                # Check performation after update
+    api_object.review_users()                                   # Review registered users
     
     
 if __name__ == "__main__":
